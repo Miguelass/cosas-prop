@@ -1,0 +1,45 @@
+Main;
+    carregar_informacio();
+    crear_pla_destudi();
+    afegir_restriccions();
+   *crear_horari(.txt);
+    borrar_pla_destudi();
+    
+Pla d'estudi:
+    creadora();
+    modificar_nom();
+    afegir_nivell();        borrar_nivell();
+    afegir_assignatura_ob();   borrar_assignatura_ob();
+    afegir_assignatura_op();   borrar_assignatura_op();
+    afegir_aula();          borrar_aula();
+    assginar_assob_nivell();
+    
+    
+Assignatura:
+    creadora();
+    afegir_grup();      borrar_grup();
+    modificar_nom();
+    
+Grup:
+    creadora();
+    afegir_subgrup();    borrar_subgrup();
+    modificar_nom();
+    modificar_capacitat();
+
+Subgrup:
+    creadora();
+    afegir_franjes_horaries();  borrar_f_h();
+    modificar_tipus();
+    
+Aula:
+    creadora();
+    modificar_nom();
+    modificar_capacitat();
+    modificar_tipus();
+    
+Horari: 
+    
+    
+    
+    
+    

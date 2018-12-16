@@ -1,0 +1,45 @@
+Implicites
+
+    **No es pot ficar una sessio de capacitat>capacitat aula --> (Capacitat < Max_Capacitat_Aula). 
+    
+    **Una Sessio pot durar maxim 4 hores --> (Hores_Sessio < 4)
+    
+    **L'hora d'inici d'una aula no pot ser mes gran que hora fi --> (hora_ini < hora_fi)
+    
+    **No pot existir dues sessions que coincideixin en la mateixa aula i la mateixa hora_ini 
+    
+    **No es poden introduir mes assignatures si no tenen lloc a l'horari --> (Num_Assig < Max_num_Assig)
+    
+    --No es poden introduir més subgrups en una assignatura dels permesos --> (Num_Subgrups < Max_Num_Subgrup_Per_Assig)
+    
+    **No hi poden haver dues assignatures/nivells/aules/grups(subgrups) de la mateixa assignatura/pla d'estudis amb el mateix nom;
+    
+    
+    
+Explicites
+    --->Una assignatura amb nivell establert Q1, no pot anar a un Q2 --> Relacio amb els nivells. 
+    //Tal assignatura no pot anar tal dia
+    ---> Una assignatura no te places per anar a un dia determinat (p.e prop no te professors disponibles per a ser donada els dimecres ni els divendres o be, l'entitat no ho permet.). 
+    //Vull que aquesta assignatura estigui en aquesta franja horaria
+    ---> L'usuari vol que una assignatura es dugui a terme en un moment determinat.
+    ---> L'usuari no vol que una assignatura es digui a terme en un moment determinat. 
+    //Vui la assignatura de mati/tarda // Reduntant gerard, ets un paquet.
+    -->No vull cap sessio en aquest horari d'aquesta aula perque el tinc reservat
+    //Inventades per optimitzar el sistema>>
+    
+    --> Vull tenir correlacio amb els grups de teoria i els de lab, es a dir, no pot haver-hi un mateix subgrup dins d'un grup on un sigui de matins i l'altre de tardes. 
+    --> Relacio d'assignatures amb nomes precorrequisit(per fer-ho fasil)--> No puc cursar en un mateix horari les dues assignatures que una es precorrequist d'una altre.
+    --> Permeto solapament amb optativa vs obligatoria
+    --> No permeto solapament amb obligatoria vs obligatoria. 
+    
+Binaries-Unaries-Globals;
+
+Algorismes de cerca
+    -força bruta(probar totes les opcions i quedarte amb la primera valida), cerca exhaustiva, cerca no informal.
+        ineficient amb moltes variables.
+    -cerca heuristica o cerca formal;
+    
+propagacio de restriccions
+    filtratge
+        -domain filtry(arconsistencia)
+        -

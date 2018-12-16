@@ -1,0 +1,12 @@
+-Casos d'us: diagrama(personeta) + Especificació detallada(que fa cada cosa i com es comporta en cas d'exit)
+-Model conceptual de dades: Diagrama uml + controladors de les kbak principals + Especificacio detallada funcions
+-Especificacio detallade i algorismes per a implementar les funcions principals
+-Relacio de les clases implementades per acada memvre del grup
+-Llista de libreries externes utilitzades
+
+
+-Codi font clases + drivers 
+
+-EXE: fitxer .jar per tote les classes
+-jocs de prova: Descripcio, objectius, entrada, sortida
+

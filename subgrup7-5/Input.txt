@@ -1,0 +1,21 @@
+FIB
+2
+0 1
+8 12
+
+a1 80 N
+a4 90 S
+a2 80 N
+a3 80 N 
+
+
+exit
+
+Prop1 S N1
+	20 Teoria 80 2 1 4
+	21 Laboratori 20 40 1 2
+	50 Teoria 60 2 1 1
+	exit
+
+
+exit

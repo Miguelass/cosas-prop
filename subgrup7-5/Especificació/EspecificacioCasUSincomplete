@@ -1,0 +1,35 @@
+Breu descripcio del diagrama de casos d'US. 
+
+
+Un diagrama de casos d'us mostra quines accions pot executar l'usuari 
+en una determinat àmbit, en el nostre cas, l'usuari podrà realitzar
+una serie d'usos en la generació d'un horari interactiu, on aquest podrà
+afegir, modificar i esborrar els components d'aquest. A més a més de 
+gestionar l'horari com a objecte, sense necessitat d'afegir ni esborrar
+cap element dels que conté. 
+
+Fent referencia al diagrama com a tal, tenim el següent: 
+
+El propietari del generador d'horaris, es a dir, l'usuari que l'executa,
+introduirà un pla d'estudi, es a dir, la carrera o grau que esta cursant,
+com podria ser "Grau en Enginyeria Informatica" o bé "Grau en Telecomunicacions".
+Un cop introduit aquest, el programa et demanarà una serie de dades referents al pla d'estudi i a contiuacio una de les
+seguents accions que vulguis executar: et permetrà gestionar tant com les aules, 
+les assignatures, els grups, les sessions i l'horari com tal. 
+
+Si l'usuari vol gestionar les Aules, tindrà permès donar d'alta tantes com vulgui
+tantmateix com si l'usuari vol modificar alguna aula ja existent o inclús l'eliminacio
+d'alguna de les que ja estan assignades,l'usuari també serà qui decidira quan deixar
+d'introduir aules per tots els usos descrits anteriorment. 
+
+L'usuari també tindrà l'opcio de fer el mateix amb els grups, les assignatures i les
+sessions de l'horari. 
+
+A més a més i com a flux alternatiu tenim la oportunitat de restructurar l'horari
+i de fer-lo a la nostra conveniencia, es a dir, si existeix un espai d'hores
+lliures pel mati i tenim una unica sessió morta per la tarda, permetre a l'usuari a
+col·locar aquesta sessió a les hores adequades del fora lliure.
+Per a que aixó es compleixi tenim els usos seguents.......... 
+
+
+

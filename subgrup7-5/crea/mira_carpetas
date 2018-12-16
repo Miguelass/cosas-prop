@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package pruebas;
+import java.io.*;
+import java.util.*;
+
+ 
+public class Carpeta {
+    public static void main(String[] args)throws Exception 
+  { 
+    String in = "C:\\Users\\Miguel\\Documents\\NetBeansProjects\\Pruebas\\";
+    Scanner tap = new Scanner(System.in);
+    String dir = in + tap.next();
+    System.out.println(in);
+    (new File(dir)).mkdirs();
+   
+   File file = new File(in);
+    String[] directories = file.list(new FilenameFilter() {
+        @Override
+        public boolean accept(File current, String name) {
+            return new File(current, name).isDirectory();
+        }
+    });
+    System.out.println(Arrays.toString(directories));
+  } 
+}

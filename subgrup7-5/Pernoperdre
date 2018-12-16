@@ -1,0 +1,130 @@
+ASSIGNATURA:
+    try(FileWriter fw = new FileWriter(dir, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+            {
+                Scanner tap = new Scanner(System.in);
+                out.println(nomAssig + " " + aux);
+        } catch (IOException e) {
+        }
+    
+    public void carregar_assignatures(Scanner sc){
+        //System.out.println("entra");
+        nomAssig = sc.next();
+        //System.out.println("nomassig");
+        if (sc.next().equals("S")) isAssigOB = true;
+        //System.out.println("OB");
+    }
+    
+AULA:
+            
+        try(FileWriter fw = new FileWriter(dir, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter out = new PrintWriter(bw))
+            {
+                Scanner tap = new Scanner(System.in);
+                out.println(nomAula + " " + capacitatA + " " + aux);
+        } catch (IOException e) {
+        }   
+        
+            public void carregar_aules(Scanner sc){
+        //System.out.println("entro");
+        nomAula = sc.next();
+        //System.out.println(nomAula);
+        capacitatA = sc.nextInt();
+        //System.out.println("entro luego cap");
+        if (sc.next().equals("S")) Aulalaboratori = true;
+    }
+    
+    
+    
+PLA ESTUDIS:
+String Dir = Path+Titulacio+"\\aules.txt";
+File fitch = new File(Dir);
+        fitch.createNewFile();
+        
+ String Dir = Path+Titulacio+"\\assignatures.txt";
+ 
+  public void carregar_pla_destudi(String nom) throws FileNotFoundException, IOException{
+        Titulacio = nom;
+        String dir = "C:\\Prop\\" + nom;
+        
+        File aul = new File(dir+"\\aules.txt");
+        Scanner scaul = new Scanner(new FileInputStream(aul));
+        System.out.println(dir+"\\aules.txt");
+        while (scaul.hasNext()){
+            Aula au = new Aula();
+            au.carregar_aules(scaul); 
+            Aules.add(au); 
+        } 
+        for(Aula al : Aules) System.out.println(al.get_nomA() + " " + al.get_capA());
+        
+        File asi = new File(dir+"\\assignatures.txt");
+        Scanner scasi = new Scanner(new FileInputStream(asi));
+        System.out.println(dir+"\\assignatures.txt");
+        while (scasi.hasNext()){
+            Asignatura as = new Asignatura();
+            as.carregar_assignatures(scasi); 
+            Asignatures.add(as); 
+        } 
+        for(Asignatura a : Asignatures) System.out.println(a.get_nomass());
+        
+        File niv = new File(dir+"\\nivells.txt");
+        Scanner scniv = new Scanner(new FileInputStream(niv));
+        System.out.println(dir+"\\nivells.txt");
+        /*while (scniv.hasNext()){
+            Nivell ni = new Nivell();
+            ni.carregar_nivells(scniv); 
+            Nivells.add(ni); 
+        } 
+        for(Nivell n : Nivells) System.out.println(n.get_nomN());*
+        
+        /*
+        File asi = new File(dir+"\\assignatures.txt");
+        BufferedReader brasi = new BufferedReader(new FileReader(asi)); 
+        String stasi; 
+        while ((stasi = brasi.readLine()) != null) 
+        System.out.println(stasi); 
+       
+        File aul = new File(dir+"\\aules.txt");
+        BufferedReader braul = new BufferedReader(new FileReader(aul)); 
+        String staul; 
+        while ((staul = braul.readLine()) != null) 
+        System.out.println(staul); 
+        
+        File niv = new File(dir+"\\nivells.txt");
+        BufferedReader brniv = new BufferedReader(new FileReader(niv)); 
+        String stniv; 
+        while ((stniv = brniv.readLine()) != null) 
+        System.out.println(stniv); 
+        */
+        
+        
+    } 
+    
+    
+    MAIN:
+    
+            else if(aux==2) { //carregar pla d'estudis ja exiteix
+            //carregar dades d'un fitxer
+            String inp = "C:\\Prop";
+            File file = new File(inp);
+            String[] directories = file.list(new FilenameFilter() {
+                @Override
+                public boolean accept(File current, String name) {
+                    return new File(current, name).isDirectory();
+                }
+            });
+            System.out.println("Escull un pla d'estudis per a carregar:");
+            System.out.println(Arrays.toString(directories));
+            
+            Scanner sc = new Scanner(System.in);
+            String pla = sc.next();
+            while(!Arrays.asList(directories).contains(pla)){
+                System.out.println("No exiteix pla d'estudis");
+                System.out.println("Escull un pla d'estudis per a carregar:");
+                pla = sc.next();
+            }
+            pa.carregar_pla_destudi(pla);
+            pa.crear_horari(sc);
+        }
